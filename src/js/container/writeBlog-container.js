@@ -14,15 +14,6 @@ function mapDispatchToProps(dispatch) {
     return {
         onAdd: (blog)=> {
             dispatch(action.addBlog(blog))
-        },
-        onDelete: (index)=> {
-            dispatch(action.deleteBlog(index))
-        },
-        onUpdate: (index)=> {
-            dispatch(action.updateBlog(index))
-        },
-        onSearch: (name)=> {
-            dispatch(action.searchBlog(name))
         }
     }
 }

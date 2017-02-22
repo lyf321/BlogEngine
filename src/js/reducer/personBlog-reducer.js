@@ -5,13 +5,13 @@ const initStore = [
         name: 'lili',
         blogTitle: 'nihao',
         blogContent: 'nihao',
-        nowtime: '2016-4-10'
+        nowTime: '2016-4-10'
     },
     {
         name: 'bob',
         blogTitle: '你好！',
         blogContent: '你好！',
-        nowtime: '2016-5-15'
+        nowTime: '2016-5-15'
     }
 ];
 
@@ -19,17 +19,16 @@ const initStore = [
 export default function (state = initStore, action) {
     switch (action.type) {
         case 'ADD':
-            console.log(state);
             state.push({
                 name: action.blog.creator,
                 blogTitle: action.blog.blogTitle,
                 blogContent: action.blog.blogContent,
-                nowTime: action.blog.nowtime
+                nowTime: action.blog.nowTime
             });
-            console.log(state);
             return state;
         case 'DELETE':
-            return state;
+            state.splice(action.index,1);
+            return [...state];
         case 'UPDATE':
             return state;
         case 'SEARCH':

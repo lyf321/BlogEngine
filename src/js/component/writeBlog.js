@@ -33,12 +33,15 @@ class WriteBlog extends React.Component {
                 <div>
                     Title:<input type="text" ref="title"/>
                 </div>
+            <br/>
                 <div>
                     Content:<input type="text" ref="content"/>
                 </div>
+            <br/>
                 <div>
                     Creator:<input type="text" ref="creator"/>
                 </div>
+            <br/>
                 <div>
                     <button onClick={this.addBlog.bind(this)}>Submit</button>
                 </div>

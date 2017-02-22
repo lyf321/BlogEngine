@@ -6,28 +6,28 @@ const addBlog = (blog) => {
 };
 
 const deleteBlog = (index) => {
-    return{
-        type:'DELETE',
+    return {
+        type: 'DELETE',
         index
     }
 };
 
 const updateBlog = (index) => {
-    return{
-        type:'UPDATE',
+    return {
+        type: 'UPDATE',
         index
     }
 };
 
-const searchBlog = (name) =>{
-    return{
-        type:'SEARCH',
+const searchBlog = (name) => {
+    return {
+        type: 'SEARCH',
         name
     }
 };
 
 module.exports = {
-   addBlog,
+    addBlog,
     deleteBlog,
     updateBlog,
     searchBlog
